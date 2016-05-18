@@ -1,45 +1,69 @@
+/* ================================================== */
+/* RESETS && DEFAULTS */
+/* ================================================== */
+* {
+	box-sizing: border-box;
+}
 
-#myBody {
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+}
+
+body {
+	background-color: #F1F2F3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+	color: #222222;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  text-align: center;
+  color: #7F8C8D;
+}
+
+/* ================================================== */
+/* LAYOUT STYLES */
+/* ================================================== */
+
+/* GENERAL LAYOUT STYLES */
+
+/*Navbar style*/
+.mynavbar {
+  color:#238EC5;
+  border-radius:0;
   background-color: white;
 }
 
-#myNavbar {
-  margin: 0 auto;
-  background-color: white;
-  border-style: none;
-}
-
-#myNavbar ul li a {
-  color: #238EC5;
-}
-
-#myNavbar ul li a:visited{
-  background-color: #102B7D;
-}
-
-#myNavbar ul li a:hover {
-  background-color: #10687D;
-}
-
-#toggle-button {
+.mynavbar .navbar-toggle {
   background-color: #238EC5;
 }
 
-#img-slider {
-  width: 100%;
-  height: 500px;
+.mynavbar .navbar-toggle .icon-bar {
+  background-color:#eeeeee;
+}
+
+/*section style*/
+/*slider*/
+#mycontent {
+  max-width: none;
   margin: 0 auto;
 }
 
-.mySlides {
+.myslides {
   width: 100%;
   height: 500px;
-  display: none;
-}
-
-#content {
-  max-width: 100%;
-  margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .w3-left, .w3-right, .w3-badge {
@@ -52,37 +76,14 @@
   padding:0;
 }
 
-.section {
-  padding: 30px 0;
-}
-
-.section .row {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-#first-building {
+/*article*/
+.myimg {
   width: 100%;
   height: 400px;
-	background-size:100% 100%;
-  background-image: url("../img/bg_image_1.jpg");
+  margin: 10px 0;
 }
 
-#second-building {
-  width: 100%;
-  height: 400px;
-  background-size:100% 100%;
-  background-image: url("../img/bg_image_2.jpg");
-}
-
-#third-building {
-  width: 100%;
-  height: 400px;
-  background-size:100% 100%;
-  background-image: url("../img/bg_image_3.jpg");
-}
-
-.block-body h2 {
+.blockheader {
   font-family: "roboto";
   font-weight: 300;
   font-size: 19px;
@@ -96,41 +97,40 @@
   background-color: #DBDBDB;
 }
 
-.block-body p {
-  font-size: 13px;
-  text-align: center;
-  color: #7F8C8D;
-  height: 100px;
-}
-
-.section button {
-  text-align: center;
-  margin: 20px auto;
-}
-
+/*footer style*/
 .mainfooter {
-  background-color: #102B7D;
+  background-color: #238EC5;
+  margin-top: 10px;
 }
 
-.mainfooter ul {
-  display: inline-block;
-  margin: 0 auto;
-}
-
-.mainfooter ul li a {
-  padding: 20px 20px;
-  margin: 0 auto;
+.footerlist {
+  margin: 10px;
+  list-style: none;
   color: #fff;
-  text-decoration: none;
   float: left;
 }
 
-.mainfooter ul li a:hover, .mainfooter ul li a:visited {
-  background-color: #238EC5;
+.footerlist li {
+  display: block;
+  padding: 10px;
 }
 
-@media screen and (min-width: 600px) {
-  .mainfooter ul li {
-    display: inline;
+.footerlist li a {
+  text-decoration: none;
+}
+
+.footerlist li a:hover, .footerlist li a:visited {
+}
+
+/*desktop*/
+@media screen and (min-width: 764px) {
+
+  .mainfooter {
+    height: 150px;
   }
+
+  .footerlist li {
+      display: inline-block;
+  }
+
 }
